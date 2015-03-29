@@ -23,3 +23,8 @@ to build docker image run something like
 
 run script uses vn as docker image name so that command makes vn image from docker file.
 
+once you are inside of the container you would use
+ `export USER=ubuntu`
+ and something like 
+ `vncserver -geometry 1440x900 -httpport 20000 -alwaysshared -dpi 96 :1`
+ to run desktop with above size
