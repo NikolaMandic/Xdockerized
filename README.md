@@ -28,3 +28,9 @@ once you are inside of the container you would use
  and something like 
  `vncserver -geometry 1440x900 -httpport 20000 -alwaysshared -dpi 96 :1`
  to run desktop with above size
+so `:1` means screen name 
+if you run this vncserver command again it will start another screen named `:2`
+I would suggest to kill old screen before starting new one
+so one would check out how to use vncserver in case this thing does not work out of the box
+for screen management deleting etc.   
+also make sure to check what port it runs on and what port you need to open via docker. so that you can connect vnc client to it. You can make ssh tunnel to that port and then connect with vnc client to your local port.
