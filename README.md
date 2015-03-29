@@ -17,3 +17,9 @@ and from that machine connect to localhost port 110 and make that port available
 also make sure to make `save` directory that one is mounted in container so you can switch files back and forth like shared folder in virtualbox.
 
 Also this thing should make clipboard work since it autostarts utility that enables that. If it does not work out of the box it should work since I've used clipboard with this I've just copy pasted my setup without giving it final test.
+
+to build docker image run something like 
+`docker build -t vn .`
+
+run script uses vn as docker image name so that command makes vn image from docker file.
+
