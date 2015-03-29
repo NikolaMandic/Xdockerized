@@ -34,3 +34,38 @@ I would suggest to kill old screen before starting new one
 so one would check out how to use vncserver in case this thing does not work out of the box
 for screen management deleting etc.   
 also make sure to check what port it runs on and what port you need to open via docker. so that you can connect vnc client to it. You can make ssh tunnel to that port and then connect with vnc client to your local port.
+
+
+
+
+
+
+                                                      +--------------------------------------------------------------+
+                                                      |                                                              |
+                                                      |                                                              |
+                                                      |                                                              |
+                                                      |                                  docker bridge               |
+                                                      |                          +------------------------------+    |
++-------------------------------+                     |                          |                              |    |
+|       your local              |                     |    +-----------+         |                              |    |
+|                               |                     |    |           |         |                              |    |
+|     +----------------+        |   ssh tunnel        |    | eth iface +---------->--docker container addr      |    |
+|     |                +----------------------------------->           |         |                              |    |
+|     |                ++       |                     |    +-----------+         +--------------+---------------+    |
+|     |  ethernet iface|        |                     |                                         ^                    |
+|     |                |        |                     |                                         |                    |
+|     +-----+----------+        |                     |                                         |                    |
+|           ^                   |                     |                          +-----------------------------+     |
+|           |                   |                     |                          |       +------------+        |     |
+|           |                   |                     |                          |       | local      |        |     |
+|           |                   |                     |                          |       |            |        |     |
+|   +-------+---------------+   |                     |                          |       +------------+        |     |
+|   |                       |   |                     |                          |                             |     |
+|   |                       |   |                     |                          |                             |     |
+|   |  novnc                |   |                     |                          |                             |     |
+|   |                       |   |                     |                          |                             |     |
+|   +-----------------------+   |                     |                          |                             |     |
+|                               |                     |                          |                             |     |
++-------------------------------+                     |                          +-----------------------------+     |
+                                                      |                                                              |
+                                                      +--------------------------------------------------------------+
