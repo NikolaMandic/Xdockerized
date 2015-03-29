@@ -38,7 +38,7 @@ also make sure to check what port it runs on and what port you need to open via 
 
 
 
-
+<pre>
 
                                                       +--------------------------------------------------------------+
                                                       |                                                              |
@@ -52,7 +52,7 @@ also make sure to check what port it runs on and what port you need to open via 
 |     +----------------+        |   ssh tunnel        |    | eth iface +-------------docker container addr      |    |
 |     |                +-------------------------------------          |         |                              |    |
 |     |                ++       |                     |    +-----------+         +--------------+---------------+    |
-|     |  ethernet iface|        |                     |                                         ^                    |
+|     |  ethernet iface|        |                     |                                         |                    |
 |     |                |        |                     |                                         |                    |
 |     +-----+----------+        |                     |                                         |                    |
 |           ^                   |                     |                          +-----------------------------+     |
@@ -69,3 +69,4 @@ also make sure to check what port it runs on and what port you need to open via 
 +-------------------------------+                     |                          +-----------------------------+     |
                                                       |                                                              |
                                                       +--------------------------------------------------------------+
+</pre>
